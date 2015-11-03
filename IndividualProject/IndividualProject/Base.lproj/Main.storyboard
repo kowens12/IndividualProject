@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,32 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
-                                <rect key="frame" x="93" y="220" width="134" height="128"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
-                                <rect key="frame" x="20" y="411" width="84" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
+                                <rect key="frame" x="6" y="538" width="84" height="30"/>
                                 <state key="normal" title="Add a Photo"/>
                                 <connections>
                                     <action selector="addUserImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9f7-NC-gAG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ud-gX-Mol">
-                                <rect key="frame" x="197" y="511" width="77" height="30"/>
-                                <state key="normal" title="Take Photo"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
+                                <rect key="frame" x="220" y="538" width="91" height="30"/>
+                                <state key="normal" title="Add a Franco"/>
+                                <connections>
+                                    <action selector="addFranco:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dUx-G2-56a"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-ck-fpE">
-                                <rect key="frame" x="197" y="511" width="77" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-ck-fpE">
+                                <rect key="frame" x="112" y="538" width="77" height="30"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="takeNewPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nb7-ck-Tyc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="386"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
+                                <rect key="frame" x="148" y="313" width="134" height="128"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ltI-EK-guN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="0bP-e5-6ko"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IKg-ck-fpE" secondAttribute="bottom" id="8n4-ek-UiS"/>
+                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="IKg-ck-fpE" secondAttribute="trailing" constant="31" id="Asy-Mt-DTR"/>
+                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="130" id="O39-76-wU3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="-11" id="TeU-vm-2o7"/>
+                            <constraint firstItem="IKg-ck-fpE" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="22" id="Wgq-gl-9Rt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-Ts-OBB" secondAttribute="bottom" id="aFG-pM-MRS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ltI-EK-guN" secondAttribute="bottom" id="aMv-Af-NZ1"/>
+                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="130" id="ezg-2S-dsp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="-11" id="yiy-he-Z12"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dragImage" destination="DDr-Hk-n42" id="tye-Hz-XVn"/>
@@ -54,7 +70,4 @@
             <point key="canvasLocation" x="130" y="283"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Image" width="214" height="317"/>
-    </resources>
 </document>

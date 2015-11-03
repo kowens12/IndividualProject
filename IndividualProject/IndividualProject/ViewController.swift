@@ -18,6 +18,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let imagePicker = UIImagePickerController()
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         draggableImage.addTarget(self, action: "draggedView:")
@@ -29,7 +31,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
+    
+
+    
     func draggedView(sender: UIPanGestureRecognizer) {
         self.view.bringSubviewToFront(sender.view!)
         var translation = sender.translationInView(self.view)
@@ -44,10 +48,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       
 
         presentViewController(imagePicker, animated: true, completion: nil)
-//        print("working")
+
     }
     
-    @IBAction func takeNewPhoto(sender: AnyObject) {
+    @IBAction func takeNewPhoto(sender: UIButton) {
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .Camera
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -62,5 +71,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func takeANewPhoto(sender: UIButton) {
+        if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            imagePicker.cameraCaptureMode = .Photo
+            
+        }
+        else if UIImagePickerController.availableCaptureModesForCameraDevice(.Front) != nil {
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            imagePicker.cameraCaptureMode = .Photo
+        }
+
+    }
+    @IBAction func addFranco(sender: AnyObject) {
+        dragImage.image = UIImage(named: "Image")
     }
 }
