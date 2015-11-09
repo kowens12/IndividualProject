@@ -28,7 +28,7 @@ class FrancoCollectionCollectionViewController: UICollectionViewController  {
        // self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
-        francoPhotos = ["Image", "franco2", "franco3", "franco4"]
+        francoPhotos = ["fancopractice", "francopractice2", "francopractice3", "francopractice4", "francopractice5", "francopractice6", "francopractice7", "francopractice8", "francopractice9", "francopractice10", "francopractice11", "francopractice12", "francopractice13", "francopractice14", "francopractice15", "francopractice15", "francopractice16", "francopractice17", "francopractice18", "francopractice19", "francopractice20", "francopractice21", "francopractice22"] 
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,14 +83,6 @@ class FrancoCollectionCollectionViewController: UICollectionViewController  {
         cell!.layer.borderWidth = 0.0
         cell!.layer.borderColor = UIColor.clearColor().CGColor
     }
-
-//    func unwindToMainView(segue: UIStoryboardSegue) {
-//        if (segue.sourceViewController .isKindOfClass(FrancoCollectionCollectionViewController)) {
-//            let sourceVC = segue.sourceViewController as! FrancoCollectionCollectionViewController
-//        }
-//    }
-
-
 
     
     // MARK: UICollectionViewDelegate

@@ -21,47 +21,53 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
-                                <rect key="frame" x="88" y="239" width="194" height="202"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
-                                <rect key="frame" x="6" y="538" width="84" height="30"/>
-                                <state key="normal" title="Add a Photo"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
+                                <rect key="frame" x="31" y="498" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="fXP-gE-Awl"/>
+                                    <constraint firstAttribute="height" constant="50" id="mbp-Jo-tLz"/>
+                                </constraints>
+                                <state key="normal" image="Picture-25 (1)"/>
                                 <connections>
                                     <action selector="addUserImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9f7-NC-gAG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
-                                <rect key="frame" x="220" y="538" width="91" height="30"/>
-                                <state key="normal" title="Add a Franco"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
+                                <rect key="frame" x="239" y="498" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vLM-xL-9wX"/>
+                                    <constraint firstAttribute="width" constant="50" id="zBd-Bo-gd4"/>
+                                </constraints>
+                                <state key="normal" image="francoicon2-1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="6G4-Gp-mDx" kind="push" identifier="toFrancoLibrary" id="0EP-Un-x44"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-ck-fpE">
-                                <rect key="frame" x="112" y="538" width="77" height="30"/>
-                                <state key="normal" title="Take Photo"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-ck-fpE">
+                                <rect key="frame" x="135" y="498" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KOu-0w-9xk"/>
+                                    <constraint firstAttribute="width" constant="50" id="Rnw-j9-YrI"/>
+                                </constraints>
+                                <state key="normal" image="Compact Camera-25"/>
                                 <connections>
                                     <action selector="takeNewPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nb7-ck-Tyc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-p5-w6H">
-                                <rect key="frame" x="191" y="490" width="32" height="30"/>
-                                <state key="normal" title="save"/>
-                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
+                                <rect key="frame" x="88" y="239" width="194" height="202"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ltI-EK-guN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="0bP-e5-6ko"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IKg-ck-fpE" secondAttribute="bottom" id="8n4-ek-UiS"/>
-                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="IKg-ck-fpE" secondAttribute="trailing" constant="31" id="Asy-Mt-DTR"/>
-                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="130" id="O39-76-wU3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="-11" id="TeU-vm-2o7"/>
-                            <constraint firstItem="IKg-ck-fpE" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="22" id="Wgq-gl-9Rt"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-Ts-OBB" secondAttribute="bottom" id="aFG-pM-MRS"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ltI-EK-guN" secondAttribute="bottom" id="aMv-Af-NZ1"/>
-                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="130" id="ezg-2S-dsp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="-11" id="yiy-he-Z12"/>
+                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="IKg-ck-fpE" secondAttribute="trailing" constant="54" id="5aN-7P-3fu"/>
+                            <constraint firstItem="IKg-ck-fpE" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="54" id="B3U-0I-Hxr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ltI-EK-guN" secondAttribute="bottom" constant="20" id="GoQ-JP-wmF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IKg-ck-fpE" secondAttribute="bottom" constant="20" id="Oed-d5-Pr7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-Ts-OBB" secondAttribute="bottom" constant="20" id="aIb-fn-PdF"/>
+                            <constraint firstItem="IKg-ck-fpE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w0P-aJ-H03"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GAE-4X-QRI"/>
@@ -69,6 +75,7 @@
                         <outlet property="dragImage" destination="DDr-Hk-n42" id="tye-Hz-XVn"/>
                         <outlet property="pinchView" destination="DDr-Hk-n42" id="BuS-3h-pRD"/>
                         <outlet property="pinchViewTwo" destination="naq-qb-WY5" id="yjq-F3-OFp"/>
+                        <outlet property="rotateView" destination="DDr-Hk-n42" id="9Pw-Fh-ISf"/>
                         <outlet property="userImageView" destination="naq-qb-WY5" id="7ov-F5-NcC"/>
                     </connections>
                 </viewController>
@@ -99,7 +106,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="152" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fN-9V-Xtd">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fN-9V-Xtd">
                                             <rect key="frame" x="0.0" y="0.0" width="152" height="120"/>
                                         </imageView>
                                     </subviews>
@@ -161,4 +168,9 @@
             <point key="canvasLocation" x="662" y="283"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Compact Camera-25" width="25" height="25"/>
+        <image name="Picture-25 (1)" width="25" height="25"/>
+        <image name="francoicon2-1" width="60" height="60"/>
+    </resources>
 </document>

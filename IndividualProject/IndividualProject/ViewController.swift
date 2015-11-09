@@ -25,14 +25,19 @@ var selectedIndex = 0
     @IBOutlet weak var pinchViewTwo: UIImageView!
     let pinchRecTwo = UIPinchGestureRecognizer()
     
-    
+    @IBOutlet weak var rotateView: UIImageView!
+    let rotateImage = UIRotationGestureRecognizer()
+    var lastRotation = CGFloat()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //drag image uigesturerecognizer
         draggableImage.addTarget(self, action: "draggedView:")
         dragImage!.addGestureRecognizer(draggableImage)
         dragImage!.userInteractionEnabled = true
         
+        //pinch to resize image uigesturerecognizer
         pinchRec.addTarget(self, action: "pinchedView:")
         pinchView.addGestureRecognizer(pinchRec)
         pinchView.userInteractionEnabled = true
@@ -43,6 +48,13 @@ var selectedIndex = 0
         pinchViewTwo.userInteractionEnabled = true
         pinchViewTwo.multipleTouchEnabled = true
         
+        //rotate image uigesturerecognizer
+        rotateImage.addTarget(self, action: "rotatedView:")
+        rotateView.addGestureRecognizer(rotateImage)
+        rotateView.userInteractionEnabled = true
+        rotateView.multipleTouchEnabled = true
+        
+        //imagepicker for camera and photo library access
         imagePicker.delegate = self
         
     }
@@ -85,6 +97,24 @@ var selectedIndex = 0
         self.view.bringSubviewToFront(pinchViewTwo)
         sender.view!.transform = CGAffineTransformScale(sender.view!.transform, sender.scale, sender.scale)
         sender.scale = 1.0
+    }
+    
+    func rotatedView(sender:UIRotationGestureRecognizer){
+        var lastRotation = CGFloat()
+        var velocity = CGFloat(0.5)
+
+        self.view.bringSubviewToFront(rotateView)
+        if(sender.state == UIGestureRecognizerState.Ended){
+            lastRotation = 0.0;
+        }
+        
+        var rotation = 0.0 - (lastRotation - sender.rotation)
+        var point = rotateImage.locationInView(rotateView)
+        var currentTrans = sender.view!.transform
+        let newTrans = CGAffineTransformRotate(currentTrans, rotation)
+        sender.view!.transform = newTrans
+        lastRotation = sender.rotation
+        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
