@@ -14,6 +14,9 @@
 		654774321BE7B64A00A5F3CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654774301BE7B64A00A5F3CD /* LaunchScreen.storyboard */; };
 		6547743D1BE7B64A00A5F3CD /* IndividualProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6547743C1BE7B64A00A5F3CD /* IndividualProjectTests.swift */; };
 		654774481BE7B64A00A5F3CD /* IndividualProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774471BE7B64A00A5F3CD /* IndividualProjectUITests.swift */; };
+		654774681BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774671BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift */; };
+		6547746A1BEB9CFD00A5F3CD /* FrancoCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774691BEB9CFD00A5F3CD /* FrancoCellCollectionViewCell.swift */; };
+		6547746C1BEBED4600A5F3CD /* FrancoLibraryHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6547746B1BEBED4600A5F3CD /* FrancoLibraryHeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		654774431BE7B64A00A5F3CD /* IndividualProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndividualProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654774471BE7B64A00A5F3CD /* IndividualProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualProjectUITests.swift; sourceTree = "<group>"; };
 		654774491BE7B64A00A5F3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		654774671BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrancoCollectionCollectionViewController.swift; sourceTree = "<group>"; };
+		654774691BEB9CFD00A5F3CD /* FrancoCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrancoCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		6547746B1BEBED4600A5F3CD /* FrancoLibraryHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrancoLibraryHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				654774271BE7B64A00A5F3CD /* AppDelegate.swift */,
 				654774291BE7B64A00A5F3CD /* ViewController.swift */,
+				654774671BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift */,
+				654774691BEB9CFD00A5F3CD /* FrancoCellCollectionViewCell.swift */,
+				6547746B1BEBED4600A5F3CD /* FrancoLibraryHeaderCollectionReusableView.swift */,
 				6547742B1BE7B64A00A5F3CD /* Main.storyboard */,
 				6547742E1BE7B64A00A5F3CD /* Assets.xcassets */,
 				654774301BE7B64A00A5F3CD /* LaunchScreen.storyboard */,
@@ -257,6 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6547742A1BE7B64A00A5F3CD /* ViewController.swift in Sources */,
+				6547746C1BEBED4600A5F3CD /* FrancoLibraryHeaderCollectionReusableView.swift in Sources */,
+				6547746A1BEB9CFD00A5F3CD /* FrancoCellCollectionViewCell.swift in Sources */,
+				654774681BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift in Sources */,
 				654774281BE7B64A00A5F3CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +494,7 @@
 				6547744E1BE7B64A00A5F3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6547744F1BE7B64A00A5F3CD /* Build configuration list for PBXNativeTarget "IndividualProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +503,7 @@
 				654774511BE7B64A00A5F3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		654774521BE7B64A00A5F3CD /* Build configuration list for PBXNativeTarget "IndividualProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +512,7 @@
 				654774541BE7B64A00A5F3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
