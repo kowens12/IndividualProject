@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		653437FE1BF2AD59003D27F9 /* FrancophileLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653437FD1BF2AD59003D27F9 /* FrancophileLaunch.storyboard */; };
 		654774281BE7B64A00A5F3CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774271BE7B64A00A5F3CD /* AppDelegate.swift */; };
 		6547742A1BE7B64A00A5F3CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774291BE7B64A00A5F3CD /* ViewController.swift */; };
 		6547742D1BE7B64A00A5F3CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6547742B1BE7B64A00A5F3CD /* Main.storyboard */; };
 		6547742F1BE7B64A00A5F3CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6547742E1BE7B64A00A5F3CD /* Assets.xcassets */; };
-		654774321BE7B64A00A5F3CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654774301BE7B64A00A5F3CD /* LaunchScreen.storyboard */; };
 		6547743D1BE7B64A00A5F3CD /* IndividualProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6547743C1BE7B64A00A5F3CD /* IndividualProjectTests.swift */; };
 		654774481BE7B64A00A5F3CD /* IndividualProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774471BE7B64A00A5F3CD /* IndividualProjectUITests.swift */; };
 		654774681BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774671BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift */; };
@@ -36,17 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		653437FD1BF2AD59003D27F9 /* FrancophileLaunch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FrancophileLaunch.storyboard; sourceTree = "<group>"; };
 		654774241BE7B64A00A5F3CD /* IndividualProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndividualProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654774271BE7B64A00A5F3CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		654774291BE7B64A00A5F3CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6547742C1BE7B64A00A5F3CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6547742E1BE7B64A00A5F3CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		654774311BE7B64A00A5F3CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		654774331BE7B64A00A5F3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		654774381BE7B64A00A5F3CD /* IndividualProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndividualProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		654774381BE7B64A00A5F3CD /* IndividualProject.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndividualProject.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6547743C1BE7B64A00A5F3CD /* IndividualProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualProjectTests.swift; sourceTree = "<group>"; };
 		6547743E1BE7B64A00A5F3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		654774431BE7B64A00A5F3CD /* IndividualProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndividualProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		654774431BE7B64A00A5F3CD /* IndividualProject.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndividualProject.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654774471BE7B64A00A5F3CD /* IndividualProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualProjectUITests.swift; sourceTree = "<group>"; };
 		654774491BE7B64A00A5F3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654774671BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrancoCollectionCollectionViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		6547741B1BE7B64A00A5F3CD = {
 			isa = PBXGroup;
 			children = (
-				654774261BE7B64A00A5F3CD /* IndividualProject */,
+				654774261BE7B64A00A5F3CD /* James Francophile */,
 				6547743B1BE7B64A00A5F3CD /* IndividualProjectTests */,
 				654774461BE7B64A00A5F3CD /* IndividualProjectUITests */,
 				654774251BE7B64A00A5F3CD /* Products */,
@@ -92,13 +92,13 @@
 			isa = PBXGroup;
 			children = (
 				654774241BE7B64A00A5F3CD /* IndividualProject.app */,
-				654774381BE7B64A00A5F3CD /* IndividualProjectTests.xctest */,
-				654774431BE7B64A00A5F3CD /* IndividualProjectUITests.xctest */,
+				654774381BE7B64A00A5F3CD /* IndividualProject.xctest */,
+				654774431BE7B64A00A5F3CD /* IndividualProject.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		654774261BE7B64A00A5F3CD /* IndividualProject */ = {
+		654774261BE7B64A00A5F3CD /* James Francophile */ = {
 			isa = PBXGroup;
 			children = (
 				654774271BE7B64A00A5F3CD /* AppDelegate.swift */,
@@ -106,10 +106,11 @@
 				654774671BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift */,
 				654774691BEB9CFD00A5F3CD /* FrancoCellCollectionViewCell.swift */,
 				6547742B1BE7B64A00A5F3CD /* Main.storyboard */,
+				653437FD1BF2AD59003D27F9 /* FrancophileLaunch.storyboard */,
 				6547742E1BE7B64A00A5F3CD /* Assets.xcassets */,
-				654774301BE7B64A00A5F3CD /* LaunchScreen.storyboard */,
 				654774331BE7B64A00A5F3CD /* Info.plist */,
 			);
+			name = "James Francophile";
 			path = IndividualProject;
 			sourceTree = "<group>";
 		};
@@ -166,7 +167,7 @@
 			);
 			name = IndividualProjectTests;
 			productName = IndividualProjectTests;
-			productReference = 654774381BE7B64A00A5F3CD /* IndividualProjectTests.xctest */;
+			productReference = 654774381BE7B64A00A5F3CD /* IndividualProject.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		654774421BE7B64A00A5F3CD /* IndividualProjectUITests */ = {
@@ -184,7 +185,7 @@
 			);
 			name = IndividualProjectUITests;
 			productName = IndividualProjectUITests;
-			productReference = 654774431BE7B64A00A5F3CD /* IndividualProjectUITests.xctest */;
+			productReference = 654774431BE7B64A00A5F3CD /* IndividualProject.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654774321BE7B64A00A5F3CD /* LaunchScreen.storyboard in Resources */,
+				653437FE1BF2AD59003D27F9 /* FrancophileLaunch.storyboard in Resources */,
 				6547742F1BE7B64A00A5F3CD /* Assets.xcassets in Resources */,
 				6547742D1BE7B64A00A5F3CD /* Main.storyboard in Resources */,
 			);
@@ -307,14 +308,6 @@
 				6547742C1BE7B64A00A5F3CD /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		654774301BE7B64A00A5F3CD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				654774311BE7B64A00A5F3CD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -407,8 +400,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IndividualProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.IndividualProject;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.JamesFrancophile;
+				PRODUCT_NAME = IndividualProject;
 			};
 			name = Debug;
 		};
@@ -418,8 +411,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IndividualProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.IndividualProject;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.JamesFrancophile;
+				PRODUCT_NAME = IndividualProject;
 			};
 			name = Release;
 		};
@@ -430,7 +423,7 @@
 				INFOPLIST_FILE = IndividualProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.IndividualProjectTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IndividualProject;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IndividualProject.app/IndividualProject";
 			};
 			name = Debug;
@@ -442,7 +435,7 @@
 				INFOPLIST_FILE = IndividualProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.IndividualProjectTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IndividualProject;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IndividualProject.app/IndividualProject";
 			};
 			name = Release;
@@ -453,7 +446,7 @@
 				INFOPLIST_FILE = IndividualProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.IndividualProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IndividualProject;
 				TEST_TARGET_NAME = IndividualProject;
 				USES_XCTRUNNER = YES;
 			};
@@ -465,7 +458,7 @@
 				INFOPLIST_FILE = IndividualProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.IndividualProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IndividualProject;
 				TEST_TARGET_NAME = IndividualProject;
 				USES_XCTRUNNER = YES;
 			};

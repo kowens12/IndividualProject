@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,22 +19,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
+                                <rect key="frame" x="20" y="72" width="280" height="414"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
-                                <rect key="frame" x="31" y="498" width="50" height="50"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
+                                <rect key="frame" x="63" y="237" width="194" height="202"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="fXP-gE-Awl"/>
-                                    <constraint firstAttribute="height" constant="50" id="mbp-Jo-tLz"/>
+                                    <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
                                 </constraints>
-                                <state key="normal" image="Picture-25 (1)"/>
-                                <connections>
-                                    <action selector="addUserImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9f7-NC-gAG"/>
-                                </connections>
-                            </button>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
-                                <rect key="frame" x="239" y="498" width="50" height="50"/>
+                                <rect key="frame" x="178" y="498" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vLM-xL-9wX"/>
                                     <constraint firstAttribute="width" constant="50" id="zBd-Bo-gd4"/>
@@ -46,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-ck-fpE">
-                                <rect key="frame" x="135" y="498" width="50" height="50"/>
+                                <rect key="frame" x="88" y="498" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KOu-0w-9xk"/>
                                     <constraint firstAttribute="width" constant="50" id="Rnw-j9-YrI"/>
@@ -56,18 +52,43 @@
                                     <action selector="takeNewPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nb7-ck-Tyc"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
-                                <rect key="frame" x="88" y="239" width="194" height="202"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-pU-Vh4">
+                                <rect key="frame" x="254" y="498" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mDK-FA-Yf6"/>
+                                    <constraint firstAttribute="width" constant="50" id="udL-33-yfP"/>
+                                </constraints>
+                                <state key="normal" image="saveImage"/>
+                                <connections>
+                                    <action selector="mergeAndSaveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66F-1b-qdr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
+                                <rect key="frame" x="12" y="498" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="fXP-gE-Awl"/>
+                                    <constraint firstAttribute="height" constant="50" id="mbp-Jo-tLz"/>
+                                </constraints>
+                                <state key="normal" image="Picture-25 (1)"/>
+                                <connections>
+                                    <action selector="addUserImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9f7-NC-gAG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="IKg-ck-fpE" secondAttribute="trailing" constant="54" id="5aN-7P-3fu"/>
-                            <constraint firstItem="IKg-ck-fpE" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="54" id="B3U-0I-Hxr"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ltI-EK-guN" secondAttribute="bottom" constant="20" id="GoQ-JP-wmF"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IKg-ck-fpE" secondAttribute="bottom" constant="20" id="Oed-d5-Pr7"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-Ts-OBB" secondAttribute="bottom" constant="20" id="aIb-fn-PdF"/>
-                            <constraint firstItem="IKg-ck-fpE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w0P-aJ-H03"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dnU-pU-Vh4" secondAttribute="trailing" id="4gT-gq-alq"/>
+                            <constraint firstAttribute="trailing" secondItem="naq-qb-WY5" secondAttribute="trailing" constant="20" symbolic="YES" id="6yH-Ro-oZm"/>
+                            <constraint firstItem="naq-qb-WY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7s0-LC-RmK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-Ts-OBB" secondAttribute="bottom" constant="20" id="LvS-lw-FjZ"/>
+                            <constraint firstItem="IKg-ck-fpE" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="26" id="MW8-Rv-x3c"/>
+                            <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="OS6-Xr-hpa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IKg-ck-fpE" secondAttribute="bottom" constant="20" id="PYe-KN-gwO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ltI-EK-guN" secondAttribute="bottom" constant="20" id="VFt-0I-8ph"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dnU-pU-Vh4" secondAttribute="bottom" constant="20" id="cnq-ya-5gg"/>
+                            <constraint firstItem="ltI-EK-guN" firstAttribute="top" secondItem="naq-qb-WY5" secondAttribute="bottom" constant="12" id="dDg-4y-GFO"/>
+                            <constraint firstItem="dnU-pU-Vh4" firstAttribute="leading" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="26" id="j7k-KL-bTb"/>
+                            <constraint firstItem="ltI-EK-guN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="jEc-1W-QZp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GAE-4X-QRI"/>
@@ -172,5 +193,6 @@
         <image name="Compact Camera-25" width="25" height="25"/>
         <image name="Picture-25 (1)" width="25" height="25"/>
         <image name="francoicon2-1" width="60" height="60"/>
+        <image name="saveImage" width="25" height="25"/>
     </resources>
 </document>

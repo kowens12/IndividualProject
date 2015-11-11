@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate  {
 
     
-var selectedIndex = 0
+//var selectedIndex = 0
+
+    
     
     @IBOutlet weak var dragImage: UIImageView?
     let draggableImage = UIPanGestureRecognizer()
@@ -28,10 +30,9 @@ var selectedIndex = 0
     @IBOutlet weak var rotateView: UIImageView!
     let rotateImage = UIRotationGestureRecognizer()
     var lastRotation = CGFloat()
-
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
         //drag image uigesturerecognizer
         draggableImage.addTarget(self, action: "draggedView:")
         dragImage!.addGestureRecognizer(draggableImage)
@@ -56,7 +57,11 @@ var selectedIndex = 0
         
         //imagepicker for camera and photo library access
         imagePicker.delegate = self
-        
+            
+//        dragImage?.contentMode = UIViewContentMode.ScaleAspectFill
+        userImageView?.contentMode = UIViewContentMode.ScaleAspectFill
+        userImageView?.autoresizingMask = UIViewAutoresizing.FlexibleBottomMargin; UIViewAutoresizing.FlexibleHeight;UIViewAutoresizing.FlexibleRightMargin; UIViewAutoresizing.FlexibleLeftMargin; UIViewAutoresizing.FlexibleTopMargin; UIViewAutoresizing.FlexibleWidth
+        userImageView?.contentMode = UIViewContentMode.ScaleAspectFill
     }
     
     
@@ -65,7 +70,8 @@ var selectedIndex = 0
         // Dispose of any resources that can be recreated.
         
     }
-   
+
+    
     func draggedView(sender: UIPanGestureRecognizer) {
         self.view.bringSubviewToFront(sender.view!)
         var translation = sender.translationInView(self.view)
@@ -74,18 +80,18 @@ var selectedIndex = 0
     }
     
     @IBAction  func addUserImagePicker(sender: UIButton) {
-        imagePicker.allowsEditing = true
+        imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
-    
     @IBAction  func takeNewPhoto(sender: UIButton) {
-        imagePicker.allowsEditing = true
+        imagePicker.allowsEditing = false
         imagePicker.sourceType = .Camera
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+    
     
     func pinchedView(sender:UIPinchGestureRecognizer){
         self.view.bringSubviewToFront(pinchView)
@@ -142,7 +148,7 @@ var selectedIndex = 0
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func takeANewPhoto(sender: UIButton) {
+    func takeNewPhoto(sender: UIButton) {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
             imagePicker.allowsEditing = false
             imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
@@ -155,5 +161,51 @@ var selectedIndex = 0
             imagePicker.cameraCaptureMode = .Photo
             }
         }
+    
+    }
+
+    
+    func savedImageAlert() {
+        var alert: UIAlertView = UIAlertView()
+        alert.title = "Saved!"
+        alert.message = "Your Franco File has been saved!"
+        alert.delegate = self
+        alert.addButtonWithTitle("Ok")
+        alert.show()
+    }
+
+    @IBAction func mergeAndSaveImage(sender: AnyObject) {
+    
+//    let size = CGSizeMake((userImageView?.image?.size.width)!, userImageView!.image!.size.height + dragImage!.image!.size.height)
+        
+    if let userImageView = userImageView, draggedImageView = dragImage
+    {
+        let contextRect = CGRectUnion(userImageView.frame, draggedImageView.frame)
+        UIGraphicsBeginImageContext(contextRect.size)
+        
+        userImageView.image!.drawInRect(contextRect)
+        draggedImageView.image!.drawInRect(contextRect)
+        
+        let finalImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        print("flattened")
+        UIImageWriteToSavedPhotosAlbum(finalImage, nil, nil, nil)
+        print("saved")
+        self.savedImageAlert()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+//    UIGraphicsBeginImageContext(size)
+//    userImageView?.image!.drawInRect(CGRectMake(0,0,size.width, (userImageView?.image!.size.height)!))
+//    dragImage?.image!.drawInRect(CGRectMake(0,(userImageView?.image!.size.height)!,dragImage!.image!.size.width, (dragImage?.image!.size.height)!))
+//    
+//    let finalImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        
+//        print("flattened")
+//    UIImageWriteToSavedPhotosAlbum(finalImage, nil, nil, nil)
+//        print("saved")
+
     }
 }
+
