@@ -22,7 +22,7 @@
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
                                 <rect key="frame" x="20" y="72" width="280" height="414"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
                                 <rect key="frame" x="63" y="237" width="194" height="202"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
@@ -152,9 +152,9 @@
                     <navigationItem key="navigationItem" id="xb5-gh-TEw">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="3F5-AQ-IRK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kmE-db-q5e">
-                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <rect key="frame" x="16" y="7" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Add Franco"/>
                                 <connections>
                                     <segue destination="jg5-vn-CfL" kind="unwind" unwindAction="unwindToVC:" id="UIM-Sf-3xu"/>
                                 </connections>

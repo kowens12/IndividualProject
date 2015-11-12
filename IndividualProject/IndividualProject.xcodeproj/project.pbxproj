@@ -16,6 +16,8 @@
 		654774481BE7B64A00A5F3CD /* IndividualProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774471BE7B64A00A5F3CD /* IndividualProjectUITests.swift */; };
 		654774681BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774671BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift */; };
 		6547746A1BEB9CFD00A5F3CD /* FrancoCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774691BEB9CFD00A5F3CD /* FrancoCellCollectionViewCell.swift */; };
+		655ED19F1BF4F7B200899CC9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655ED19D1BF4F7B200899CC9 /* Fabric.framework */; };
+		655ED1A01BF4F7B200899CC9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655ED19E1BF4F7B200899CC9 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		654774491BE7B64A00A5F3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654774671BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrancoCollectionCollectionViewController.swift; sourceTree = "<group>"; };
 		654774691BEB9CFD00A5F3CD /* FrancoCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrancoCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		655ED19D1BF4F7B200899CC9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		655ED19E1BF4F7B200899CC9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655ED1A01BF4F7B200899CC9 /* Crashlytics.framework in Frameworks */,
+				655ED19F1BF4F7B200899CC9 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,8 @@
 				6547743B1BE7B64A00A5F3CD /* IndividualProjectTests */,
 				654774461BE7B64A00A5F3CD /* IndividualProjectUITests */,
 				654774251BE7B64A00A5F3CD /* Products */,
+				655ED19D1BF4F7B200899CC9 /* Fabric.framework */,
+				655ED19E1BF4F7B200899CC9 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +150,7 @@
 				654774201BE7B64A00A5F3CD /* Sources */,
 				654774211BE7B64A00A5F3CD /* Frameworks */,
 				654774221BE7B64A00A5F3CD /* Resources */,
+				655ED19C1BF4F76100899CC9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -257,6 +266,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		655ED19C1BF4F76100899CC9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 16137e9cb8e7ea313e72eabd66111d7faeea73ef 4bd63fef07c9423261104bb5a5659adfa2a001b1552fffa3b50437acdf7fd2e5";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		654774201BE7B64A00A5F3CD /* Sources */ = {
@@ -398,6 +423,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IndividualProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.JamesFrancophile;
@@ -409,6 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = IndividualProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.JamesFrancophile;

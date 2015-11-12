@@ -127,7 +127,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             userImageView!.contentMode = .ScaleAspectFit
             userImageView!.image = pickedImage
-            
         }
         
         dismissViewControllerAnimated(true) {
