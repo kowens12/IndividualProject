@@ -163,7 +163,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     }
 
-    
+          //alert when photo is saved
     func savedImageAlert() {
         var alert: UIAlertView = UIAlertView()
         alert.title = "Saved!"
@@ -190,7 +190,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //        UIGraphicsEndImageContext()
 //        
         
-        
+        // takes a screenshot of the uiscreen
         
         UIGraphicsBeginImageContextWithOptions(UIScreen.mainScreen().bounds.size, false, 0);
         self.view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)

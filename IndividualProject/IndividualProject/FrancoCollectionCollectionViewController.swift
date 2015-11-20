@@ -62,7 +62,7 @@ class FrancoCollectionCollectionViewController: UICollectionViewController  {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FrancoCellCollectionViewCell
     
-        // Configure the cell
+        // sets each cell of collection view to be a uiimage view of francoPhotos
     
         let image = UIImage(named: francoPhotos[indexPath.row])
         cell.francoImageCell.image = image
@@ -70,6 +70,7 @@ class FrancoCollectionCollectionViewController: UICollectionViewController  {
         return cell
     }
     
+    // highlights cell when touched 
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         selectedFranco = francoPhotos[indexPath.row]
         let cell = collectionView.cellForItemAtIndexPath(indexPath)
