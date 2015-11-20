@@ -28,7 +28,7 @@ class FrancoCollectionCollectionViewController: UICollectionViewController  {
        // self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
-        francoPhotos = ["fancopractice", "francopractice2", "francopractice3", "francopractice4", "francopractice5", "francopractice6", "francopractice7", "francopractice8", "francopractice9", "francopractice10", "francopractice11", "francopractice12", "francopractice13", "francopractice14", "francopractice15", "francopractice15", "francopractice16", "francopractice17", "francopractice18", "francopractice19", "francopractice20", "francopractice21", "francopractice22"] 
+        francoPhotos = ["fancopractice", "francopractice2", "francopractice3", "francopractice4", "francopractice5", "francopractice6", "francopractice7", "francopractice8", "francopractice9", "francopractice10", "francopractice11", "francopractice12", "francopractice13", "francopractice14", "francopractice15", "francopractice16", "francopractice17", "francopractice18"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,7 +56,7 @@ class FrancoCollectionCollectionViewController: UICollectionViewController  {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return francoPhotos.count
+        return francoPhotos.count 
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

@@ -174,23 +174,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func mergeAndSaveImage(sender: AnyObject) {
-    
+
+
 //    let size = CGSizeMake((userImageView?.image?.size.width)!, userImageView!.image!.size.height + dragImage!.image!.size.height)
         
-    if let userImageView = userImageView, draggedImageView = dragImage
-    {
-        let contextRect = CGRectUnion(userImageView.frame, draggedImageView.frame)
-        UIGraphicsBeginImageContext(contextRect.size)
+//    if let userImageView = userImageView, draggedImageView = dragImage
+//    {
+//        let contextRect = CGRectUnion(userImageView.frame, draggedImageView.frame)
+//        UIGraphicsBeginImageContext(contextRect.size)
+//        
+//        userImageView.image!.drawInRect(contextRect)
+//        draggedImageView.image!.drawInRect(contextRect)
+//        
+//        let finalImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        
         
-        userImageView.image!.drawInRect(contextRect)
-        draggedImageView.image!.drawInRect(contextRect)
         
-        let finalImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
         
-        print("flattened")
-        UIImageWriteToSavedPhotosAlbum(finalImage, nil, nil, nil)
-        print("saved")
+        UIGraphicsBeginImageContextWithOptions(UIScreen.mainScreen().bounds.size, false, 0);
+        self.view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
+        var image:UIImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         self.savedImageAlert()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -206,5 +213,3 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //        print("saved")
 
     }
-}
-

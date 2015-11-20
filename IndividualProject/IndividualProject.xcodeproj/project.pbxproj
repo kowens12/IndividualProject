@@ -209,6 +209,7 @@
 				TargetAttributes = {
 					654774231BE7B64A00A5F3CD = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 9Q67G7E28V;
 					};
 					654774371BE7B64A00A5F3CD = {
 						CreatedOnToolsVersion = 7.1;
@@ -423,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -431,6 +433,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.JamesFrancophile;
 				PRODUCT_NAME = IndividualProject;
+				PROVISIONING_PROFILE = "7dbd1bae-3980-4604-b2ca-5b4f66ba6c90";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -438,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -446,6 +451,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kateo.project.JamesFrancophile;
 				PRODUCT_NAME = IndividualProject;
+				PROVISIONING_PROFILE = "7dbd1bae-3980-4604-b2ca-5b4f66ba6c90";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
