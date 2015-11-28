@@ -12,9 +12,12 @@ let reuseIdentifier = "Cell"
 var selectedFranco = String()
 
 
+
+
 class FrancoCollectionCollectionViewController: UICollectionViewController  {
     
-    
+
+
     var francoPhotos = [String]()
     var indexPath = NSIndexPath()
     
@@ -28,6 +31,7 @@ class FrancoCollectionCollectionViewController: UICollectionViewController  {
        // self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+                
         francoPhotos = ["fancopractice", "francopractice2", "francopractice3", "francopractice4", "francopractice5", "francopractice6", "francopractice7", "francopractice8", "francopractice9", "francopractice10", "francopractice11", "francopractice12", "francopractice13", "francopractice14", "francopractice15", "francopractice16", "francopractice17", "francopractice18"]
     }
 

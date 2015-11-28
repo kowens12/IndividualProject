@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate  {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIToolbarDelegate, UIAlertViewDelegate  {
 
     
-//var selectedIndex = 0
+//var selectedIndex = 0  
 
     
     
@@ -80,17 +80,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction  func addUserImagePicker(sender: UIButton) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .PhotoLibrary
-        
-        presentViewController(imagePicker, animated: true, completion: nil)
+        let actionSheetController = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action ->Void in
+        } 
+        actionSheetController.addAction(cancelAction)
+        print("working")
+
+        let addImageFromGalleryAction: UIAlertAction = UIAlertAction(title: "Add from Library", style: .Default)  { action ->Void in
+        self.imagePicker.allowsEditing = false
+        self.imagePicker.sourceType = .PhotoLibrary
+        self.presentViewController(self.imagePicker, animated: true,completion: nil)
     }
-    @IBAction  func takeNewPhoto(sender: UIButton) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .Camera
-        
-        presentViewController(imagePicker, animated: true, completion: nil)
+        actionSheetController.addAction(addImageFromGalleryAction)
+
+    let takePictureAction: UIAlertAction = UIAlertAction(title: "Take Picture", style: .Default) { action -> Void in
+        self.imagePicker.allowsEditing = false
+        self.imagePicker.sourceType = .Camera
+        self.presentViewController(self.imagePicker, animated: true, completion: nil)
     }
+        actionSheetController.addAction(takePictureAction)
+        
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+}
     
     
     func pinchedView(sender:UIPinchGestureRecognizer){
@@ -191,6 +202,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //        
         
         // takes a screenshot of the uiscreen
+        
         
         UIGraphicsBeginImageContextWithOptions(UIScreen.mainScreen().bounds.size, false, 0);
         self.view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)

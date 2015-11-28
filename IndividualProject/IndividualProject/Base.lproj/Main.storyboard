@@ -28,31 +28,7 @@
                                     <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
-                                <rect key="frame" x="178" y="498" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="vLM-xL-9wX"/>
-                                    <constraint firstAttribute="width" constant="50" id="zBd-Bo-gd4"/>
-                                </constraints>
-                                <state key="normal" image="francoicon2-1">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="6G4-Gp-mDx" kind="push" identifier="toFrancoLibrary" id="0EP-Un-x44"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-ck-fpE">
-                                <rect key="frame" x="88" y="498" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KOu-0w-9xk"/>
-                                    <constraint firstAttribute="width" constant="50" id="Rnw-j9-YrI"/>
-                                </constraints>
-                                <state key="normal" image="Compact Camera-25"/>
-                                <connections>
-                                    <action selector="takeNewPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nb7-ck-Tyc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-pU-Vh4">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-pU-Vh4">
                                 <rect key="frame" x="254" y="498" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mDK-FA-Yf6"/>
@@ -74,6 +50,19 @@
                                     <action selector="addUserImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9f7-NC-gAG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
+                                <rect key="frame" x="135" y="498" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vLM-xL-9wX"/>
+                                    <constraint firstAttribute="width" constant="50" id="zBd-Bo-gd4"/>
+                                </constraints>
+                                <state key="normal" image="francoicon2-1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6G4-Gp-mDx" kind="push" identifier="toFrancoLibrary" id="0EP-Un-x44"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -81,12 +70,11 @@
                             <constraint firstAttribute="trailing" secondItem="naq-qb-WY5" secondAttribute="trailing" constant="20" symbolic="YES" id="6yH-Ro-oZm"/>
                             <constraint firstItem="naq-qb-WY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7s0-LC-RmK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-Ts-OBB" secondAttribute="bottom" constant="20" id="LvS-lw-FjZ"/>
-                            <constraint firstItem="IKg-ck-fpE" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="26" id="MW8-Rv-x3c"/>
                             <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="OS6-Xr-hpa"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IKg-ck-fpE" secondAttribute="bottom" constant="20" id="PYe-KN-gwO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ltI-EK-guN" secondAttribute="bottom" constant="20" id="VFt-0I-8ph"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dnU-pU-Vh4" secondAttribute="bottom" constant="20" id="cnq-ya-5gg"/>
                             <constraint firstItem="ltI-EK-guN" firstAttribute="top" secondItem="naq-qb-WY5" secondAttribute="bottom" constant="12" id="dDg-4y-GFO"/>
+                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="73" id="gfy-WX-7YO"/>
                             <constraint firstItem="dnU-pU-Vh4" firstAttribute="leading" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="26" id="j7k-KL-bTb"/>
                             <constraint firstItem="ltI-EK-guN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="jEc-1W-QZp"/>
                         </constraints>
@@ -190,7 +178,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Compact Camera-25" width="25" height="25"/>
         <image name="Picture-25 (1)" width="25" height="25"/>
         <image name="francoicon2-1" width="60" height="60"/>
         <image name="saveImage" width="25" height="25"/>
