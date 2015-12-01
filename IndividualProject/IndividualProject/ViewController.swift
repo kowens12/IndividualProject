@@ -62,6 +62,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         userImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         userImageView?.autoresizingMask = UIViewAutoresizing.FlexibleBottomMargin; UIViewAutoresizing.FlexibleHeight;UIViewAutoresizing.FlexibleRightMargin; UIViewAutoresizing.FlexibleLeftMargin; UIViewAutoresizing.FlexibleTopMargin; UIViewAutoresizing.FlexibleWidth
         userImageView?.contentMode = UIViewContentMode.ScaleAspectFill
+        userImageView?.image = UIImage(named: "defaultBackground")
     }
     
     
@@ -70,6 +71,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Dispose of any resources that can be recreated.
         
     }
+
 
     
     func draggedView(sender: UIPanGestureRecognizer) {
@@ -153,7 +155,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             dragImage!.image = UIImage(named: selectedImageFromLibrary)
         }
     
-
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }

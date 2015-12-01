@@ -22,12 +22,6 @@
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
                                 <rect key="frame" x="20" y="72" width="280" height="414"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
-                                <rect key="frame" x="63" y="237" width="194" height="202"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-pU-Vh4">
                                 <rect key="frame" x="254" y="498" width="50" height="50"/>
                                 <constraints>
@@ -63,12 +57,19 @@
                                     <segue destination="6G4-Gp-mDx" kind="push" identifier="toFrancoLibrary" id="0EP-Un-x44"/>
                                 </connections>
                             </button>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
+                                <rect key="frame" x="63" y="178" width="194" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="dnU-pU-Vh4" secondAttribute="trailing" id="4gT-gq-alq"/>
                             <constraint firstAttribute="trailing" secondItem="naq-qb-WY5" secondAttribute="trailing" constant="20" symbolic="YES" id="6yH-Ro-oZm"/>
                             <constraint firstItem="naq-qb-WY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7s0-LC-RmK"/>
+                            <constraint firstItem="DDr-Hk-n42" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kpn-Ib-5Ah"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-Ts-OBB" secondAttribute="bottom" constant="20" id="LvS-lw-FjZ"/>
                             <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="OS6-Xr-hpa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ltI-EK-guN" secondAttribute="bottom" constant="20" id="VFt-0I-8ph"/>
@@ -77,6 +78,7 @@
                             <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="73" id="gfy-WX-7YO"/>
                             <constraint firstItem="dnU-pU-Vh4" firstAttribute="leading" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="26" id="j7k-KL-bTb"/>
                             <constraint firstItem="ltI-EK-guN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="jEc-1W-QZp"/>
+                            <constraint firstItem="DDr-Hk-n42" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u5m-fb-vtz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GAE-4X-QRI"/>
@@ -115,8 +117,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="152" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fN-9V-Xtd">
+                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fN-9V-Xtd">
                                             <rect key="frame" x="0.0" y="0.0" width="152" height="120"/>
+                                            <gestureRecognizers/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -137,21 +140,12 @@
                             <outlet property="delegate" destination="6G4-Gp-mDx" id="bQX-Aa-Wyz"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="xb5-gh-TEw">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="3F5-AQ-IRK">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kmE-db-q5e">
-                                <rect key="frame" x="16" y="7" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Franco"/>
-                                <connections>
-                                    <segue destination="jg5-vn-CfL" kind="unwind" unwindAction="unwindToVC:" id="UIM-Sf-3xu"/>
-                                </connections>
-                            </button>
-                            <connections>
-                                <segue destination="jg5-vn-CfL" kind="unwind" unwindAction="unwindToVC:" id="xnQ-gK-9kD"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Franco Library" id="xb5-gh-TEw">
+                        <barButtonItem key="backBarButtonItem" title="&lt;" id="q6q-Ja-yXN"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="jg5-vn-CfL" kind="unwind" identifier="addFranco" unwindAction="unwindToVC:" id="5Us-CG-2Ia"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUa-H4-Em1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jg5-vn-CfL" userLabel="Exit" sceneMemberID="exit"/>

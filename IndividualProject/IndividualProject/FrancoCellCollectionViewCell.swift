@@ -13,5 +13,4 @@ import UIKit
 
 class FrancoCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var francoImageCell: UIImageView!
-    
-}
+    }
