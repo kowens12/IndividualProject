@@ -10,11 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIToolbarDelegate, UIAlertViewDelegate  {
 
-    
-//var selectedIndex = 0  
-
-    
-    
     @IBOutlet weak var dragImage: UIImageView?
     let draggableImage = UIPanGestureRecognizer()
     
@@ -30,6 +25,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var rotateView: UIImageView!
     let rotateImage = UIRotationGestureRecognizer()
     var lastRotation = CGFloat()
+
     
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -63,6 +59,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         userImageView?.autoresizingMask = UIViewAutoresizing.FlexibleBottomMargin; UIViewAutoresizing.FlexibleHeight;UIViewAutoresizing.FlexibleRightMargin; UIViewAutoresizing.FlexibleLeftMargin; UIViewAutoresizing.FlexibleTopMargin; UIViewAutoresizing.FlexibleWidth
         userImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         userImageView?.image = UIImage(named: "defaultBackground")
+
+    
     }
     
     
@@ -154,7 +152,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let selectedImageFromLibrary = selectedFranco
             dragImage!.image = UIImage(named: selectedImageFromLibrary)
         }
-    
+
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -207,7 +205,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         UIGraphicsBeginImageContextWithOptions(UIScreen.mainScreen().bounds.size, false, 0);
         self.view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
-        var image:UIImage = UIGraphicsGetImageFromCurrentImageContext();
+        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext();
         
         UIGraphicsEndImageContext();
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
