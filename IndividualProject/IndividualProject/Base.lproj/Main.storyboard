@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--James Francophile -->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IndividualProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,19 +22,8 @@
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
                                 <rect key="frame" x="20" y="72" width="280" height="414"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-pU-Vh4">
-                                <rect key="frame" x="254" y="498" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="mDK-FA-Yf6"/>
-                                    <constraint firstAttribute="width" constant="50" id="udL-33-yfP"/>
-                                </constraints>
-                                <state key="normal" image="saveImage"/>
-                                <connections>
-                                    <action selector="mergeAndSaveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66F-1b-qdr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
-                                <rect key="frame" x="12" y="498" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
+                                <rect key="frame" x="20" y="498" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="fXP-gE-Awl"/>
                                     <constraint firstAttribute="height" constant="50" id="mbp-Jo-tLz"/>
@@ -44,7 +33,7 @@
                                     <action selector="addUserImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9f7-NC-gAG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
                                 <rect key="frame" x="135" y="498" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vLM-xL-9wX"/>
@@ -63,25 +52,36 @@
                                     <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-pU-Vh4">
+                                <rect key="frame" x="250" y="498" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mDK-FA-Yf6"/>
+                                    <constraint firstAttribute="width" constant="50" id="udL-33-yfP"/>
+                                </constraints>
+                                <state key="normal" image="saveImage"/>
+                                <connections>
+                                    <action selector="mergeAndSaveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66F-1b-qdr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="dnU-pU-Vh4" secondAttribute="trailing" id="4gT-gq-alq"/>
                             <constraint firstAttribute="trailing" secondItem="naq-qb-WY5" secondAttribute="trailing" constant="20" symbolic="YES" id="6yH-Ro-oZm"/>
                             <constraint firstItem="naq-qb-WY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7s0-LC-RmK"/>
+                            <constraint firstItem="dnU-pU-Vh4" firstAttribute="leading" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="65" id="Akq-7g-SvM"/>
                             <constraint firstItem="DDr-Hk-n42" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kpn-Ib-5Ah"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-Ts-OBB" secondAttribute="bottom" constant="20" id="LvS-lw-FjZ"/>
                             <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="OS6-Xr-hpa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ltI-EK-guN" secondAttribute="bottom" constant="20" id="VFt-0I-8ph"/>
+                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="65" id="VJJ-ef-w4I"/>
+                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WhC-Yb-nPb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dnU-pU-Vh4" secondAttribute="bottom" constant="20" id="cnq-ya-5gg"/>
                             <constraint firstItem="ltI-EK-guN" firstAttribute="top" secondItem="naq-qb-WY5" secondAttribute="bottom" constant="12" id="dDg-4y-GFO"/>
-                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="73" id="gfy-WX-7YO"/>
-                            <constraint firstItem="dnU-pU-Vh4" firstAttribute="leading" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="26" id="j7k-KL-bTb"/>
-                            <constraint firstItem="ltI-EK-guN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="jEc-1W-QZp"/>
-                            <constraint firstItem="DDr-Hk-n42" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u5m-fb-vtz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ltI-EK-guN" secondAttribute="leading" id="rAR-4R-xj9"/>
+                            <constraint firstItem="DDr-Hk-n42" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-5" id="u5m-fb-vtz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GAE-4X-QRI"/>
+                    <navigationItem key="navigationItem" title="James Francophile " id="GAE-4X-QRI"/>
                     <connections>
                         <outlet property="dragImage" destination="DDr-Hk-n42" id="tye-Hz-XVn"/>
                         <outlet property="pinchView" destination="DDr-Hk-n42" id="BuS-3h-pRD"/>

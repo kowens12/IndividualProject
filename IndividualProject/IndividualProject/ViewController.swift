@@ -25,10 +25,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var rotateView: UIImageView!
     let rotateImage = UIRotationGestureRecognizer()
     var lastRotation = CGFloat()
-
     
     override func viewDidLoad() {
     super.viewDidLoad()
+        
+        
+        
         //drag image uigesturerecognizer
         draggableImage.addTarget(self, action: "draggedView:")
         dragImage!.addGestureRecognizer(draggableImage)
@@ -70,13 +72,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
 
-
     
     func draggedView(sender: UIPanGestureRecognizer) {
         self.view.bringSubviewToFront(sender.view!)
         var translation = sender.translationInView(self.view)
         sender.view!.center = CGPointMake(sender.view!.center.x + translation.x, sender.view!.center.y + translation.y)
         sender.setTranslation(CGPointZero, inView: self.view)
+        
     }
     
     @IBAction  func addUserImagePicker(sender: UIButton) {
@@ -90,6 +92,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.imagePicker.allowsEditing = false
         self.imagePicker.sourceType = .PhotoLibrary
         self.presentViewController(self.imagePicker, animated: true,completion: nil)
+        
     }
         actionSheetController.addAction(addImageFromGalleryAction)
 
