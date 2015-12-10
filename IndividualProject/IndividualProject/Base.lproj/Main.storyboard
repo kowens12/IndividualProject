@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--James Francophile -->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IndividualProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,19 +22,19 @@
                             <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
                                 <rect key="frame" x="20" y="72" width="280" height="414"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
-                                <rect key="frame" x="20" y="498" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
+                                <rect key="frame" x="16" y="498" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="fXP-gE-Awl"/>
                                     <constraint firstAttribute="height" constant="50" id="mbp-Jo-tLz"/>
                                 </constraints>
-                                <state key="normal" image="Picture-25 (1)"/>
+                                <state key="normal" title="addPhoto" image="Picture-25 (1)"/>
                                 <connections>
                                     <action selector="addUserImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9f7-NC-gAG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
-                                <rect key="frame" x="135" y="498" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
+                                <rect key="frame" x="131" y="498" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vLM-xL-9wX"/>
                                     <constraint firstAttribute="width" constant="50" id="zBd-Bo-gd4"/>
@@ -46,19 +46,19 @@
                                     <segue destination="6G4-Gp-mDx" kind="push" identifier="toFrancoLibrary" id="0EP-Un-x44"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
                                 <rect key="frame" x="63" y="178" width="194" height="202"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-pU-Vh4">
-                                <rect key="frame" x="250" y="498" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-pU-Vh4">
+                                <rect key="frame" x="246" y="498" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mDK-FA-Yf6"/>
                                     <constraint firstAttribute="width" constant="50" id="udL-33-yfP"/>
                                 </constraints>
-                                <state key="normal" image="saveImage"/>
+                                <state key="normal" title="savePhoto" image="saveImage"/>
                                 <connections>
                                     <action selector="mergeAndSaveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66F-1b-qdr"/>
                                 </connections>
@@ -69,6 +69,7 @@
                             <constraint firstAttribute="trailing" secondItem="naq-qb-WY5" secondAttribute="trailing" constant="20" symbolic="YES" id="6yH-Ro-oZm"/>
                             <constraint firstItem="naq-qb-WY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7s0-LC-RmK"/>
                             <constraint firstItem="dnU-pU-Vh4" firstAttribute="leading" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="65" id="Akq-7g-SvM"/>
+                            <constraint firstItem="DDr-Hk-n42" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="AxM-rR-l3X"/>
                             <constraint firstItem="DDr-Hk-n42" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kpn-Ib-5Ah"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-Ts-OBB" secondAttribute="bottom" constant="20" id="LvS-lw-FjZ"/>
                             <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="OS6-Xr-hpa"/>
@@ -81,7 +82,7 @@
                             <constraint firstItem="DDr-Hk-n42" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-5" id="u5m-fb-vtz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="James Francophile " id="GAE-4X-QRI"/>
+                    <navigationItem key="navigationItem" id="GAE-4X-QRI"/>
                     <connections>
                         <outlet property="dragImage" destination="DDr-Hk-n42" id="tye-Hz-XVn"/>
                         <outlet property="pinchView" destination="DDr-Hk-n42" id="BuS-3h-pRD"/>
@@ -141,7 +142,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Franco Library" id="xb5-gh-TEw">
-                        <barButtonItem key="backBarButtonItem" title="&lt;" id="q6q-Ja-yXN"/>
+                        <barButtonItem key="backBarButtonItem" title="&lt; " id="q6q-Ja-yXN"/>
                     </navigationItem>
                     <connections>
                         <segue destination="jg5-vn-CfL" kind="unwind" identifier="addFranco" unwindAction="unwindToVC:" id="5Us-CG-2Ia"/>

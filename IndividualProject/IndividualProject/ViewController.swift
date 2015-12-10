@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIToolbarDelegate, UIAlertViewDelegate  {
 
+    
     @IBOutlet weak var dragImage: UIImageView?
     let draggableImage = UIPanGestureRecognizer()
     
@@ -71,7 +72,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Dispose of any resources that can be recreated.
         
     }
-
+  
+    override func shouldAutorotate() -> Bool {
+        return false 
+    }
     
     func draggedView(sender: UIPanGestureRecognizer) {
         self.view.bringSubviewToFront(sender.view!)
@@ -86,7 +90,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action ->Void in
         } 
         actionSheetController.addAction(cancelAction)
-        print("working")
 
         let addImageFromGalleryAction: UIAlertAction = UIAlertAction(title: "Add from Library", style: .Default)  { action ->Void in
         self.imagePicker.allowsEditing = false
