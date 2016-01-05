@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HSj-d1-bAV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HSj-d1-bAV">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -19,67 +19,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
-                                <rect key="frame" x="20" y="72" width="280" height="414"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-EK-guN">
-                                <rect key="frame" x="16" y="498" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="fXP-gE-Awl"/>
-                                    <constraint firstAttribute="height" constant="50" id="mbp-Jo-tLz"/>
-                                </constraints>
-                                <state key="normal" title="addPhoto" image="Picture-25 (1)"/>
-                                <connections>
-                                    <action selector="addUserImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9f7-NC-gAG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Ts-OBB">
-                                <rect key="frame" x="131" y="498" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="vLM-xL-9wX"/>
-                                    <constraint firstAttribute="width" constant="50" id="zBd-Bo-gd4"/>
-                                </constraints>
-                                <state key="normal" image="francoicon2-1">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="6G4-Gp-mDx" kind="push" identifier="toFrancoLibrary" id="0EP-Un-x44"/>
-                                </connections>
-                            </button>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
-                                <rect key="frame" x="63" y="178" width="194" height="202"/>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
+                                <rect key="frame" x="63" y="173" width="194" height="202"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnU-pU-Vh4">
-                                <rect key="frame" x="246" y="498" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="mDK-FA-Yf6"/>
-                                    <constraint firstAttribute="width" constant="50" id="udL-33-yfP"/>
-                                </constraints>
-                                <state key="normal" title="savePhoto" image="saveImage"/>
-                                <connections>
-                                    <action selector="mergeAndSaveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66F-1b-qdr"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SmK-vK-UDL">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YK5-mD-cPX"/>
+                                    <barButtonItem style="plain" id="0oU-XT-dUk">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ltI-EK-guN">
+                                            <rect key="frame" x="46" y="-3" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="fXP-gE-Awl"/>
+                                                <constraint firstAttribute="height" constant="50" id="mbp-Jo-tLz"/>
+                                            </constraints>
+                                            <state key="normal" title="addPhoto" image="Compact Camera-25"/>
+                                            <connections>
+                                                <action selector="addUserImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9f7-NC-gAG"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="A3f-a2-7kE"/>
+                                    <barButtonItem style="plain" id="Uws-OS-B40">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="b9h-Ts-OBB">
+                                            <rect key="frame" x="135" y="-3" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="vLM-xL-9wX"/>
+                                                <constraint firstAttribute="width" constant="50" id="zBd-Bo-gd4"/>
+                                            </constraints>
+                                            <state key="normal" image="francoicon2-1">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="6G4-Gp-mDx" kind="push" identifier="toFrancoLibrary" id="0EP-Un-x44"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eT6-h1-ZqM"/>
+                                    <barButtonItem style="plain" id="3s4-PL-aUe">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="dnU-pU-Vh4">
+                                            <rect key="frame" x="225" y="-3" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="mDK-FA-Yf6"/>
+                                                <constraint firstAttribute="width" constant="50" id="udL-33-yfP"/>
+                                            </constraints>
+                                            <state key="normal" title="savePhoto" image="saveImage"/>
+                                            <connections>
+                                                <action selector="mergeAndSaveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66F-1b-qdr"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pyQ-hF-AG7"/>
+                                </items>
+                            </toolbar>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
+                                <rect key="frame" x="20" y="119" width="280" height="330"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="naq-qb-WY5" secondAttribute="trailing" constant="20" symbolic="YES" id="6yH-Ro-oZm"/>
-                            <constraint firstItem="naq-qb-WY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7s0-LC-RmK"/>
-                            <constraint firstItem="dnU-pU-Vh4" firstAttribute="leading" secondItem="b9h-Ts-OBB" secondAttribute="trailing" constant="65" id="Akq-7g-SvM"/>
-                            <constraint firstItem="DDr-Hk-n42" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="AxM-rR-l3X"/>
-                            <constraint firstItem="DDr-Hk-n42" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kpn-Ib-5Ah"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b9h-Ts-OBB" secondAttribute="bottom" constant="20" id="LvS-lw-FjZ"/>
-                            <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="OS6-Xr-hpa"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ltI-EK-guN" secondAttribute="bottom" constant="20" id="VFt-0I-8ph"/>
-                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="leading" secondItem="ltI-EK-guN" secondAttribute="trailing" constant="65" id="VJJ-ef-w4I"/>
-                            <constraint firstItem="b9h-Ts-OBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WhC-Yb-nPb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dnU-pU-Vh4" secondAttribute="bottom" constant="20" id="cnq-ya-5gg"/>
-                            <constraint firstItem="ltI-EK-guN" firstAttribute="top" secondItem="naq-qb-WY5" secondAttribute="bottom" constant="12" id="dDg-4y-GFO"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="ltI-EK-guN" secondAttribute="leading" id="rAR-4R-xj9"/>
-                            <constraint firstItem="DDr-Hk-n42" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-5" id="u5m-fb-vtz"/>
+                            <constraint firstItem="naq-qb-WY5" firstAttribute="centerX" secondItem="SmK-vK-UDL" secondAttribute="centerX" id="32S-aD-mGt"/>
+                            <constraint firstItem="naq-qb-WY5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3ez-Dl-kOv"/>
+                            <constraint firstItem="naq-qb-WY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="AIn-DB-JTE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SmK-vK-UDL" secondAttribute="trailing" constant="-20" id="BTd-5y-xwM"/>
+                            <constraint firstItem="naq-qb-WY5" firstAttribute="centerX" secondItem="DDr-Hk-n42" secondAttribute="centerX" id="DDr-To-FP1"/>
+                            <constraint firstItem="SmK-vK-UDL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="JeC-q9-TeQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SmK-vK-UDL" secondAttribute="bottom" id="LaP-Xi-0cJ"/>
+                            <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="cbc-06-fry"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GAE-4X-QRI"/>
@@ -173,7 +185,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Picture-25 (1)" width="25" height="25"/>
+        <image name="Compact Camera-25" width="25" height="25"/>
         <image name="francoicon2-1" width="60" height="60"/>
         <image name="saveImage" width="25" height="25"/>
     </resources>
