@@ -241,6 +241,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //    let finalImage = UIGraphicsGetImageFromCurrentImageContext()
 //        UIGraphicsEndImageContext()
 
-    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
 }
 }
