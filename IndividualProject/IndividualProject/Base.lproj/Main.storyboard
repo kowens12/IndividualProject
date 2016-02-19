@@ -19,14 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
-                                <rect key="frame" x="63" y="173" width="194" height="202"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
-                                </constraints>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SmK-vK-UDL">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="YK5-mD-cPX"/>
                                     <barButtonItem style="plain" id="0oU-XT-dUk">
@@ -78,25 +73,43 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="pyQ-hF-AG7"/>
                                 </items>
                             </toolbar>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
-                                <rect key="frame" x="20" y="119" width="280" height="330"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-Vc-3Wi" userLabel="mainScrollView">
+                                <rect key="frame" x="0.0" y="96" width="320" height="398"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
+                                        <rect key="frame" x="63" y="87" width="194" height="202"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
+                                        <rect key="frame" x="0.0" y="8" width="320" height="328"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="naq-qb-WY5" secondAttribute="height" multiplier="160:121" id="FF2-SE-kVr"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="5sQ-Vc-3Wi" secondAttribute="leading" id="AD1-TT-prc"/>
+                                    <constraint firstAttribute="trailing" secondItem="naq-qb-WY5" secondAttribute="trailing" id="QjL-eY-KuN"/>
+                                    <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="5sQ-Vc-3Wi" secondAttribute="leading" id="wQ7-Ca-p8I"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="naq-qb-WY5" firstAttribute="centerX" secondItem="SmK-vK-UDL" secondAttribute="centerX" id="32S-aD-mGt"/>
-                            <constraint firstItem="naq-qb-WY5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3ez-Dl-kOv"/>
-                            <constraint firstItem="naq-qb-WY5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="AIn-DB-JTE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5sQ-Vc-3Wi" secondAttribute="trailing" constant="-20" id="9Ic-tv-9M3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SmK-vK-UDL" secondAttribute="trailing" constant="-20" id="BTd-5y-xwM"/>
-                            <constraint firstItem="naq-qb-WY5" firstAttribute="centerX" secondItem="DDr-Hk-n42" secondAttribute="centerX" id="DDr-To-FP1"/>
+                            <constraint firstItem="5sQ-Vc-3Wi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="FsX-BM-8Xd"/>
                             <constraint firstItem="SmK-vK-UDL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="JeC-q9-TeQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SmK-vK-UDL" secondAttribute="bottom" id="LaP-Xi-0cJ"/>
-                            <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="cbc-06-fry"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GAE-4X-QRI"/>
                     <connections>
                         <outlet property="dragImage" destination="DDr-Hk-n42" id="tye-Hz-XVn"/>
+                        <outlet property="mainScrollView" destination="5sQ-Vc-3Wi" id="Ml2-Wo-hYL"/>
                         <outlet property="pinchView" destination="DDr-Hk-n42" id="BuS-3h-pRD"/>
                         <outlet property="pinchViewTwo" destination="naq-qb-WY5" id="yjq-F3-OFp"/>
                         <outlet property="rotateView" destination="DDr-Hk-n42" id="9Pw-Fh-ISf"/>

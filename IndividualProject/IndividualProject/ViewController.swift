@@ -9,9 +9,10 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIToolbarDelegate, UIAlertViewDelegate  {
-
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIToolbarDelegate, UIAlertViewDelegate, UIScrollViewDelegate  {
     
+    
+    @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var dragImage: UIImageView?
     
     let draggableImage = UIPanGestureRecognizer()
@@ -38,6 +39,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var lastRotation = CGFloat()
     
+    var scrollViewForUserImage = UIScrollView!()
     
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -69,19 +71,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //imagepicker for camera and photo library access
         imagePicker.delegate = self
             
-//        dragImage?.contentMode = UIViewContentMode.ScaleAspectFill
-        userImageView?.contentMode = UIViewContentMode.ScaleAspectFill
-        userImageView?.autoresizingMask = UIViewAutoresizing.FlexibleBottomMargin; UIViewAutoresizing.FlexibleHeight;UIViewAutoresizing.FlexibleRightMargin; UIViewAutoresizing.FlexibleLeftMargin; UIViewAutoresizing.FlexibleTopMargin; UIViewAutoresizing.FlexibleWidth
-        userImageView?.contentMode = UIViewContentMode.ScaleAspectFill
-//        userImageView?.image = UIImage(named: "defaultBackground")
-
-        
-//        let frame = CGRect(x: 50, y: 50, width: 400, height: 500)
-//        let blueSquare = UIView(frame: frame)
-//        blueSquare.backgroundColor = UIColor.blueColor()
+        dragImage?.contentMode = UIViewContentMode.ScaleAspectFill
+//        userImageView?.contentMode = UIViewContentMode.ScaleAspectFit
+//        userImageView?.autoresizingMask = UIViewAutoresizing.FlexibleBottomMargin; UIViewAutoresizing.FlexibleHeight;UIViewAutoresizing.FlexibleRightMargin; UIViewAutoresizing.FlexibleLeftMargin; UIViewAutoresizing.FlexibleTopMargin; UIViewAutoresizing.FlexibleWidth
 //        
-//        view.addSubview(blueSquare)
+//        mainScrollView = UIImage(named: "defaultBackground")
         
+//        scrollView = UIScrollView(frame: userImageView!.bounds)
+//        scrollView.backgroundColor = UIColor.blackColor()
+//        scrollView.contentSize = userImageView!.bounds.size
+//        scrollView.autoresizingMask = UIViewAutoresizing.FlexibleWidth
+//        scrollView.autoresizingMask = UIViewAutoresizing.FlexibleHeight
+       
+            
+//        view.addSubview(uiscrollview)
+//        scrollView.addSubview(userImageView!)
+//
+//        scrollView.showsHorizontalScrollIndicator = false
+//        scrollView.showsVerticalScrollIndicator = false
+//        
     }
     
     
@@ -211,33 +219,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         alert.show()
     }
     
-//    let myView = UIView()
-//    
-//    func imageWithView(myView:UIView)->UIImage{
-//        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0.0)
-//        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-//        let image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        return image
-//    }
     
+    
+
     @IBAction func mergeAndSaveImage(sender: AnyObject) {
 //        let newImage = imageWithView(myView)
 //        UIImageWriteToSavedPhotosAlbum(finalImage, nil, nil, nil)
         
-        self.savedImageAlert()
-        self.dismissViewControllerAnimated(true, completion: nil)
-    
+        
         // takes a screenshot of the uiscreen
         
-        UIGraphicsBeginImageContextWithOptions(UIScreen.mainScreen().bounds.size, false, 0.0)
-        self.view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: true)
+        UIGraphicsBeginImageContextWithOptions(userImageView!.bounds.size, false, 0.0)
+        self.userImageView!.drawViewHierarchyInRect(userImageView!.bounds, afterScreenUpdates: true)
         
         var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         
+        //saved image alert
+        self.savedImageAlert()
+        self.dismissViewControllerAnimated(true, completion: nil)
+
 //    let finalImage = UIGraphicsGetImageFromCurrentImageContext()
 //        UIGraphicsEndImageContext()
 
