@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AB6C0181CCD60DA00E22BA0 /* Tracked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6C0171CCD60DA00E22BA0 /* Tracked.swift */; };
 		653437FE1BF2AD59003D27F9 /* FrancophileLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653437FD1BF2AD59003D27F9 /* FrancophileLaunch.storyboard */; };
 		654774281BE7B64A00A5F3CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774271BE7B64A00A5F3CD /* AppDelegate.swift */; };
 		6547742A1BE7B64A00A5F3CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654774291BE7B64A00A5F3CD /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AB6C0171CCD60DA00E22BA0 /* Tracked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracked.swift; sourceTree = "<group>"; };
 		653437FD1BF2AD59003D27F9 /* FrancophileLaunch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FrancophileLaunch.storyboard; sourceTree = "<group>"; };
 		654774241BE7B64A00A5F3CD /* IndividualProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndividualProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654774271BE7B64A00A5F3CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				653437FD1BF2AD59003D27F9 /* FrancophileLaunch.storyboard */,
 				6547742E1BE7B64A00A5F3CD /* Assets.xcassets */,
 				654774331BE7B64A00A5F3CD /* Info.plist */,
+				1AB6C0171CCD60DA00E22BA0 /* Tracked.swift */,
 			);
 			name = "James Francophile";
 			path = IndividualProject;
@@ -291,6 +294,7 @@
 			files = (
 				6547742A1BE7B64A00A5F3CD /* ViewController.swift in Sources */,
 				6547746A1BEB9CFD00A5F3CD /* FrancoCellCollectionViewCell.swift in Sources */,
+				1AB6C0181CCD60DA00E22BA0 /* Tracked.swift in Sources */,
 				654774681BEB9AD500A5F3CD /* FrancoCollectionCollectionViewController.swift in Sources */,
 				654774281BE7B64A00A5F3CD /* AppDelegate.swift in Sources */,
 			);

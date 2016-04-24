@@ -27,6 +27,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let pinchRec = UIPinchGestureRecognizer()
     
+    // make some changes
 
     @IBOutlet weak var pinchViewTwo: UIImageView!
     
