@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HSj-d1-bAV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HSj-d1-bAV">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,6 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-Vc-3Wi" userLabel="mainScrollView">
+                                <rect key="frame" x="0.0" y="96" width="320" height="398"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fmt-5N-rCn" userLabel="userImage">
+                                        <rect key="frame" x="40" y="233" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SmK-vK-UDL">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,29 +81,6 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="pyQ-hF-AG7"/>
                                 </items>
                             </toolbar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-Vc-3Wi" userLabel="mainScrollView">
-                                <rect key="frame" x="0.0" y="96" width="320" height="398"/>
-                                <subviews>
-                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-Hk-n42">
-                                        <rect key="frame" x="63" y="87" width="194" height="202"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="DDr-Hk-n42" secondAttribute="height" multiplier="97:101" placeholder="YES" id="ybs-c6-MVj"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naq-qb-WY5">
-                                        <rect key="frame" x="0.0" y="8" width="320" height="328"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="naq-qb-WY5" secondAttribute="height" multiplier="160:121" id="FF2-SE-kVr"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="5sQ-Vc-3Wi" secondAttribute="leading" id="AD1-TT-prc"/>
-                                    <constraint firstAttribute="trailing" secondItem="naq-qb-WY5" secondAttribute="trailing" id="QjL-eY-KuN"/>
-                                    <constraint firstItem="naq-qb-WY5" firstAttribute="leading" secondItem="5sQ-Vc-3Wi" secondAttribute="leading" id="wQ7-Ca-p8I"/>
-                                </constraints>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -108,12 +93,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GAE-4X-QRI"/>
                     <connections>
-                        <outlet property="dragImage" destination="DDr-Hk-n42" id="tye-Hz-XVn"/>
                         <outlet property="mainScrollView" destination="5sQ-Vc-3Wi" id="Ml2-Wo-hYL"/>
-                        <outlet property="pinchView" destination="DDr-Hk-n42" id="BuS-3h-pRD"/>
-                        <outlet property="pinchViewTwo" destination="naq-qb-WY5" id="yjq-F3-OFp"/>
-                        <outlet property="rotateView" destination="DDr-Hk-n42" id="9Pw-Fh-ISf"/>
-                        <outlet property="userImageView" destination="naq-qb-WY5" id="7ov-F5-NcC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
